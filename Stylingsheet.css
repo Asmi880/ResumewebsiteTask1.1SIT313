@@ -1,0 +1,242 @@
+/* Reseting default margin, padding, and box-sizing for all elements */
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styling for the body */
+/* Global styling is a way of applying styles to all elements on a web page, or to a specific group of elements  */
+/* The main advantage of global styling is that it is easy to maintain. If you need to change the styles for all elements on a page, you only need to change the global CSS file.  */
+body {
+    font-family: Arial, sans-serif; 
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Styling for links */
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Reseting list styling for unordered lists */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation bar styles */
+.topnav {
+    background-color: purple;
+    display: flex;
+    height: 30px;
+}
+.topnav li {
+    margin-right: 20px;
+}
+.topnav li:last-child {
+    margin-right: 0;
+}
+.topnav a {
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.topnav a:hover {
+    background-color: #111;
+}
+
+/* Wrapper styles */
+#wrapper {
+    position: relative;
+    overflow: hidden;
+    opacity: 1;
+}
+
+.text{
+    opacity: 0;
+}
+
+.text:hover{
+    opacity: 1;
+}
+
+/* Styling for centered content within the wrapper */
+.centered {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    text-align: center;
+    padding: 20px;
+    line-height: 1.3;
+}
+
+/* Avatar section styles */
+.avatar {
+    text-align: center;
+    margin: 30px 0;
+}
+.avatar img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.avatar span {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    font-size: 18px;
+    color: #555;
+    position: relative; /* Add relative positioning to the span */
+}
+
+/* Stylish line beneath the avatar span */
+.avatar span::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    background-color: #04AA6D; /* Stylish line color */
+    position: absolute;
+    bottom: -5px; /* Position the line below the text */
+    left: 50%;
+    transform: translateX(-50%); /* Center the line horizontally */
+}
+
+/* Work section styles */
+.atable {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Styling for table cells in the work section */
+.atable td {
+    flex: 0 0 45%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Styling for headings in the work section */
+.atable h3 {
+    margin-bottom: 10px;
+}
+
+/* Photo gallery styles */
+.photo {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Styling for headings in the photo gallery section */
+.photo h3 {
+    margin-bottom: 20px;
+}
+
+/* Styling for the photo gallery grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+/* Styling for individual gallery images */
+.gallery-grid .Gallery {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    /* Add frame styles */
+    border: 3px solid #333;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Zoom effect on gallery image hover */
+.gallery-grid .Gallery:hover {
+    transform: scale(1.05);
+}
+
+/* Collage specific styles */
+.p1, .p2, .p3, .p4 {
+    width: 100%;
+    height: 150px;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    /* Adjust gallery grid and individual photo sizes */
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .p1, .p2, .p3, .p4 {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* Header image styling */
+.headerimage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: right;
+    max-height: 80vh; /* Set the maximum height to 80% of the viewport height */
+    padding-bottom: 20px; /* Adding some padding to the bottom */
+}
+
+.previous-units {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Adjust unit width to cover the whole width for all units */
+.unit {
+    width: 50%;
+    height: 50%;
+    margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
+    margin-left: 25%;
+    display: flex;
+    padding: 10px;
+
+}
+
+
+/* Styling for responsive images within unit */
+.unit .Responsive {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Styling for unit headings */
+.unit h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+/* Styling for unit descriptions */
+.unit .Description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    /* ... (Same as before) */
+}
